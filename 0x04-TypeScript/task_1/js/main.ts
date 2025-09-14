@@ -41,13 +41,12 @@ interface printTeacherFunction {
 }
 
 // Implementing the Print Teacher Function
-const printTeacher: printTeacherFunction = (firstName, lastName) => {
+function printTeacher(firstName: string, lastName: string): string {
   return `${firstName.charAt(0)}. ${lastName}`;
-};
+}
 
-console.log(printTeacher("John", "Doe"));   // Output: J. Doe
-console.log(printTeacher("Alice", "Smith")); // Output: A. Smith
-
+// Example usage
+console.log(printTeacher("John", "Doe")); // J. Doe
 
 
 // Add teacher to an array
