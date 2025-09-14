@@ -1,3 +1,4 @@
+// 1. Let's build a Teacher interface
 // Creating Teacher Interface
 interface Teacher {
   readonly firstName: string;      
@@ -19,6 +20,8 @@ const teacher3: Teacher = {
 
 console.log(teacher3);
 
+
+// 2. Extending the Teacher class
 // Extending the Teacher Interface
 interface Director extends Teacher {
   numberOfReports: number; // new required property
@@ -35,6 +38,8 @@ const director1: Director = {
 
 console.log(director1);
 
+
+// 3. Printing teachers
 // Print Teacher Function Interface
 interface printTeacherFunction {
   (firstName: string, lastName: string): string;
@@ -47,6 +52,57 @@ function printTeacher({ firstName, lastName }: { firstName: string; lastName: st
 
 // Example usage
 console.log(printTeacher({ firstName: "John", lastName: "Doe" })); // J. Doe
+
+
+// 4. Writing a class
+// Defining the constructor interface
+interface StudentConstructor {
+  firstName: string;
+  lastName: string;
+}
+
+// Defining the class interface
+interface StudentClassInterface {
+  workOnHomework(): string;
+  displayName(): string;
+}
+
+// Creating the StudentClass
+class StudentClass implements StudentClassInterface {
+  firstName: string;
+  lastName: string;
+
+  constructor({ firstName, lastName }: StudentConstructor) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+  }
+
+  workOnHomework(): string {
+    return "Currently working";
+  }
+
+  displayName(): string {
+    return this.firstName;
+  }
+}
+
+// Example usage
+const student = new StudentClass({ firstName: "John", lastName: "Doe" });
+console.log(student.displayName());   // John
+console.log(student.workOnHomework()); // Currently working
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 // Add teacher to an array
