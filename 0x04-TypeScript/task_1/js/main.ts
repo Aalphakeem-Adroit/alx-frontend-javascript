@@ -68,7 +68,7 @@ interface StudentClassInterface {
 }
 
 // Creating the StudentClass
-class StudentClass implements StudentClassInterface {
+class StudentClass {
   firstName: string;
   lastName: string;
 
