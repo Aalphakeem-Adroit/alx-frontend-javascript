@@ -69,22 +69,3 @@ console.log(emp1); // Teacher
 console.log(emp2); // Director
 console.log(emp3); // Director
 
-
-// 6. Creating functions specific to employees
-// Creating isDrector function
-function isDirector(employee: Director | Teacher): employee is Director {
-  return employee instanceof Director;
-}
-
-// Creating executeWork function
-function executeWork(employee: Director | Teacher): string {
-  if (isDirector(employee)) {
-    return employee.workDirectorTasks();
-  } else {
-    return employee.workTeacherTasks();
-  }
-}
-
-// Example usage
-console.log(executeWork(createEmployee(200)));   // Getting to work
-console.log(executeWork(createEmployee(1000)));  // Getting to director tasks
