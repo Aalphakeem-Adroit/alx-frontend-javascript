@@ -69,3 +69,16 @@ console.log(emp1); // Teacher
 console.log(emp2); // Director
 console.log(emp3); // Director
 
+// 7. String literal types
+// Define a string literal type
+type Subjects = "Math" | "History";
+
+// Define the function
+export function teachClass(todayClass: Subjects): string {
+  if (todayClass === "Math") {
+    return "Teaching Math";
+  }
+  if (todayClass === "History") {
+    return "Teaching History";
+  }
+}
