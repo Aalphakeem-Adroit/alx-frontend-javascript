@@ -74,7 +74,7 @@ console.log(emp3); // Director
 type Subjects = "Math" | "History";
 
 // Define the function
-export function teachClass(todayClass: Subjects): string {
+function teachClass(todayClass: Subjects): string {
   if (todayClass === "Math") {
     return "Teaching Math";
   }
